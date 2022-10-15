@@ -260,13 +260,18 @@ h2 {
   cursor: pointer;
 }
 
-.block-grid__item:hover::before {
+.block-grid__item::after {
   content: '';
   position: absolute;
-  width: 21px;
+  width: 0px;
   height: 200px;
-  right: -21px;
+  right: 0px;
+  transition: .3s;
+}
+
+.block-grid__item:hover::after {
   background-color: #FF0037;
+  width: 21px;
 }
 
 .block-grid__item__img {
@@ -423,7 +428,7 @@ h2 {
     height: 150px;
   }
 
-  .block-grid__item:hover::before {
+  .block-grid__item::after {
     width: 0;
     height: 0;
   }
